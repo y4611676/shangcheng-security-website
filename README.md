@@ -2,7 +2,7 @@
 
 一個現代化、響應式的公司形象網站，專為「上誠通訊監視公司」打造。採用 Next.js 14 + Tailwind CSS 構建，支援靜態導出並可部署至 GitHub Pages。
 
-https://shangchengsecurity.com/
+[上誠通訊監視公司](https://shangchengsecurity.com/)
 
 ## 🎯 專案特色
 
@@ -120,11 +120,16 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -138,8 +143,11 @@ jobs:
       - name: Build
         run: npm run build
       
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
@@ -152,7 +160,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
 ```
 
 3. **設定 GitHub Pages**
