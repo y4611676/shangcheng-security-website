@@ -1,0 +1,17 @@
+<!-- 這是一個佔位符，實際使用時需要替換為真實的圖片檔案 -->
+<!-- 圖片路徑：public/surveillance-night.jpg -->
+<!-- 圖片描述：夜間城市街道上的安全監控攝影機，深藍色調，科技感氛圍 -->
+<!-- 建議圖片尺寸：1200x800px 或更高解析度 -->
+<!-- 檔案格式：JPG 或 WebP -->
+<!-- 檔案大小：建議小於 500KB 以優化載入速度 -->
+
+<!-- 使用方式：將實際圖片檔案命名為 surveillance-night.jpg 並放置在 public/ 目錄下 -->
+<!-- 然後取消註解下面的 img 標籤，並註解掉現有的 SVG 圖示 -->
+
+<!-- 
+<img 
+  src="/surveillance-night.jpg" 
+  alt="夜間智慧監控 - AI 即時偵測 · 高畫質成像"
+  className="w-full h-full object-cover"
+/>
+-->
