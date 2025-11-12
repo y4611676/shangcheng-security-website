@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://shangchengsecurity.com/sitemap.xml
+
+
+
