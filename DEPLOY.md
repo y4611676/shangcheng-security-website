@@ -198,6 +198,48 @@ git push -f -u origin main
 - 或前往 GitHub 倉庫頁面查看最新提交
 - 在 GitHub 倉庫的「Actions」標籤頁查看部署進度
 
+### Q: 遇到 "Failed to create deployment (status: 404)" 錯誤怎麼辦？
+
+**A:** 這是因為 GitHub Pages 沒有正確啟用。請按照以下步驟操作：
+
+1. **啟用 GitHub Pages**
+   - 前往：`https://github.com/您的使用者名稱/倉庫名稱/settings/pages`
+   - 在 **Build and deployment** 區塊中
+   - **Source** 選擇 **"GitHub Actions"**（⚠️ 重要：不要選擇分支）
+   - 點擊 **Save** 儲存設定
+
+2. **檢查 Actions 權限**
+   - 前往：`https://github.com/您的使用者名稱/倉庫名稱/settings/actions`
+   - 在 **Workflow permissions** 區塊中
+   - 選擇 **"Read and write permissions"**
+   - 勾選 **"Allow GitHub Actions to create and approve pull requests"**（如果需要）
+   - 點擊 **Save** 儲存設定
+
+3. **重新觸發部署**
+   - 方法 A：推送一個新的 commit
+   ```bash
+   git add .
+   git commit -m "修復：更新部署配置"
+   git push
+   ```
+   - 方法 B：在 GitHub Actions 頁面手動重新執行失敗的 workflow
+     - 前往 Actions 標籤頁
+     - 點擊失敗的 workflow
+     - 點擊右上角的 **"Re-run jobs"** 按鈕
+
+4. **驗證部署環境**
+   - 前往：`https://github.com/您的使用者名稱/倉庫名稱/settings/environments`
+   - 確認 **github-pages** 環境存在
+   - 如果不存在，會在第一次成功部署後自動建立
+
+**常見錯誤訊息：**
+- `Failed to create deployment (status: 404)` → GitHub Pages 未啟用
+- `Cannot find any run with github.run_id` → 部署環境未建立
+- `Getting signed artifact URL failed` → 權限不足或 Pages 未啟用
+
+**完成後，您的網站會發布在：**
+`https://您的使用者名稱.github.io/倉庫名稱/`
+
 ### Q: 如何確認遠端倉庫是否已設定？
 
 **A:** 執行以下命令：
