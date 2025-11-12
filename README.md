@@ -2,7 +2,7 @@
 
 一個現代化、響應式的公司形象網站，專為「上誠通訊監視公司」打造。採用 Next.js 14 + Tailwind CSS 構建，支援靜態導出並可部署至 GitHub Pages。
 
-![上誠通訊監視公司](https://shangchengsecurity.com/)
+https://shangchengsecurity.com/
 
 ## 🎯 專案特色
 
