@@ -147,7 +147,7 @@ export default function Contact() {
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-white/20 text-center">
           <p className="text-white/70 text-sm">
-            © 2025 上誠通訊監視公司 All rights reserved.
+            © 2025 上誠通訊監視 All rights reserved.
           </p>
           <p className="text-white/60 text-xs mt-2">
             專業弱電系統施工 | 監控系統 | 門禁系統 | 網路工程

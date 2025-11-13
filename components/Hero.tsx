@@ -48,7 +48,7 @@ export default function Hero() {
               {/* 夜間監控攝影機圖片 */}
               <img 
                 src="/surveillance-night.jpg" 
-                alt="上誠通訊監視公司 - 專業夜間智慧監控系統，AI 即時偵測技術，高畫質成像，24小時守護您的安全"
+                alt="上誠通訊監視 - 專業夜間智慧監控系統，AI 即時偵測技術，高畫質成像，24小時守護您的安全"
                 className="w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"

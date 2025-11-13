@@ -12,7 +12,7 @@ export default function Navbar() {
           {/* Logo & Company Name */}
           <div className="flex-shrink-0">
             <h1 className="text-xl md:text-2xl font-bold text-primary">
-              上誠通訊監視公司
+              上誠通訊監視
             </h1>
           </div>
 

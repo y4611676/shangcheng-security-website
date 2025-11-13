@@ -1,8 +1,8 @@
-# 上誠通訊監視公司官網
+# 上誠通訊監視官網
 
-一個現代化、響應式的公司形象網站，專為「上誠通訊監視公司」打造。採用 Next.js 14 + Tailwind CSS 構建，支援靜態導出並可部署至 GitHub Pages。
+一個現代化、響應式的公司形象網站，專為「上誠通訊監視」打造。採用 Next.js 14 + Tailwind CSS 構建，支援靜態導出並可部署至 GitHub Pages。
 
-[上誠通訊監視公司](https://shangchengsecurity.com/)
+[上誠通訊監視](https://shangchengsecurity.com/)
 
 ## 🎯 專案特色
 
@@ -278,7 +278,7 @@ shangcheng-security-website/
 
 ## 📞 聯絡資訊
 
-- **公司名稱**：上誠通訊監視公司
+- **公司名稱**：上誠通訊監視
 - **電話**：03-4611676
 - **LINE**：@081kqduw
 - **Email**：shangchengsecurit@gmail.com
@@ -290,7 +290,7 @@ shangcheng-security-website/
 
 ## 📄 授權
 
-© 2025 上誠通訊監視公司 版權所有
+© 2025 上誠通訊監視 版權所有
 
 ---
 
