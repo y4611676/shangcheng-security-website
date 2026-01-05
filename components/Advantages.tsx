@@ -1,3 +1,5 @@
+'use client'
+
 export default function Advantages() {
   const advantages = [
     {
@@ -108,7 +110,7 @@ export default function Advantages() {
 
               {/* Decorative Element */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-accent/5 to-transparent rounded-bl-full"></div>
-            </div>
+            </article>
           ))}
         </div>
 

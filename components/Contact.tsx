@@ -1,3 +1,5 @@
+'use client'
+
 import { CONTACT_INFO, BUSINESS_HOURS } from '@/lib/constants'
 
 // 圖標組件
@@ -34,7 +36,6 @@ const contactInfo = [
 ]
 
 export default function Contact() {
-
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/90" id="contact" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
