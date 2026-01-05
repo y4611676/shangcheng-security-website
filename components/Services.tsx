@@ -87,52 +87,55 @@ export default function Services() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-secondary via-white to-secondary" id="services">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-secondary via-white to-secondary" id="services" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header className="text-center max-w-3xl mx-auto mb-16">
+          <h2 id="services-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             專業弱電系統施工項目
           </h2>
           <p className="text-gray-600 text-lg md:text-xl">
             提供全方位弱電系統工程服務，滿足通訊與安全需求
           </p>
-        </div>
+        </header>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8" role="list">
           {services.map((service, index) => (
-            <div
+            <article
               key={index}
               className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-transparent hover:border-accent/20"
+              role="listitem"
+              itemScope
+              itemType="https://schema.org/Service"
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent text-white rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent text-white rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                 {service.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-primary mb-3">
+              <h3 className="text-xl font-bold text-primary mb-3" itemProp="name">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <p className="text-gray-600 text-sm leading-relaxed mb-4" itemProp="description">
                 {service.description}
               </p>
 
               {/* Features */}
-              <div className="space-y-2">
+              <ul className="space-y-2" aria-label={`${service.title}特色`}>
                 {service.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center text-sm text-gray-500">
-                    <svg className="w-4 h-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <li key={idx} className="flex items-center text-sm text-gray-500">
+                    <svg className="w-4 h-4 text-accent mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    {feature}
-                  </div>
+                    <span>{feature}</span>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </article>
           ))}
         </div>
 

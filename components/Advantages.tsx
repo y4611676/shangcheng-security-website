@@ -66,27 +66,28 @@ export default function Advantages() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-white" id="advantages">
+    <section className="py-16 md:py-24 bg-white" id="advantages" aria-labelledby="advantages-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header className="text-center max-w-3xl mx-auto mb-16">
+          <h2 id="advantages-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             三大核心優勢
           </h2>
           <p className="text-gray-600 text-lg md:text-xl">
             結合先進技術與專業服務，打造最可靠的安全防護體系
           </p>
-        </div>
+        </header>
 
         {/* Advantages Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
           {advantages.map((advantage, index) => (
-            <div
+            <article
               key={index}
               className="group relative bg-gradient-to-br from-secondary to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              role="listitem"
             >
               {/* Icon */}
-              <div className={`inline-block p-4 bg-gradient-to-br ${advantage.color} text-white rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`inline-block p-4 bg-gradient-to-br ${advantage.color} text-white rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
                 {advantage.icon}
               </div>
 

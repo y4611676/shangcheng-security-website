@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://shangchengsecurity.com/</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shangchengsecurity.com/surveillance-night.jpg</image:loc>
+      <image:title>上誠通訊監視 - 專業夜間智慧監控系統</image:title>
+      <image:caption>AI 即時偵測技術，高畫質成像，24小時守護您的安全</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://shangchengsecurity.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shangchengsecurity.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shangchengsecurity.com/" />
   </url>
 </urlset>
 

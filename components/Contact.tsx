@@ -36,11 +36,11 @@ const contactInfo = [
 export default function Contact() {
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/90" id="contact">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/90" id="contact" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 id="contact-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             立即獲得專屬弱電系統解決方案
           </h2>
           <p className="text-white/90 text-lg md:text-xl">
@@ -145,14 +145,14 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <div className="mt-12 pt-8 border-t border-white/20 text-center">
+        <footer className="mt-12 pt-8 border-t border-white/20 text-center">
           <p className="text-white/70 text-sm">
             © 2025 上誠通訊監視 All rights reserved.
           </p>
           <p className="text-white/60 text-xs mt-2">
             專業弱電系統施工 | 監控系統 | 門禁系統 | 網路工程
           </p>
-        </div>
+        </footer>
       </div>
     </section>
   )

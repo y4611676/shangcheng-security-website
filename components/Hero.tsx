@@ -49,9 +49,12 @@ export default function Hero() {
               <img 
                 src="/surveillance-night.jpg" 
                 alt="上誠通訊監視 - 專業夜間智慧監控系統，AI 即時偵測技術，高畫質成像，24小時守護您的安全"
+                width={1200}
+                height={900}
                 className="w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"
+                itemProp="image"
                 onError={(e) => {
                   // 如果圖片載入失敗，顯示備用的 SVG 圖示
                   const target = e.target as HTMLImageElement;
