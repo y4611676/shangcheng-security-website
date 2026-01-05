@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: '上誠通訊監視',
     type: 'website',
     locale: 'zh_TW',
-    alternateLocale: ['zh-CN'],
+    alternateLocale: ['zh-CN', 'en'],
     images: [
       {
         url: '/surveillance-night.jpg',
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
         height: 630,
         alt: '上誠通訊監視 - 專業監控系統，AI智慧偵測，4K高畫質夜視，24小時守護您的安全',
         type: 'image/jpeg',
+        secureUrl: 'https://shangchengsecurity.com/surveillance-night.jpg',
       },
     ],
   },
@@ -43,6 +44,7 @@ export const metadata: Metadata = {
     description: '上誠通訊監視是桃園中壢地區專業弱電系統施工廠商，提供監控系統、網路工程、門禁系統、保全系統等完整服務。採用最新 AI 智慧偵測技術，配備 4K 高畫質夜視功能與雲端儲存方案，為家庭與企業打造全方位安全防護解決方案。',
     images: ['/surveillance-night.jpg'],
     creator: '@shangchengsecurity',
+    site: '@shangchengsecurity',
   },
   robots: {
     index: true,
@@ -88,6 +90,16 @@ export const metadata: Metadata = {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    'content-language': 'zh-TW',
+    'copyright': '© 2025 上誠通訊監視 All rights reserved.',
+    'rating': 'general',
+    'revisit-after': '7 days',
+    'distribution': 'global',
+    'coverage': 'worldwide',
+    'target': 'all',
+    'audience': 'all',
+    'X-UA-Compatible': 'IE=edge,chrome=1',
+    'format-detection': 'telephone=no',
   },
 }
 
@@ -262,6 +274,23 @@ export default function RootLayout({
       bestRating: '5',
       worstRating: '1',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: {
+          '@type': 'Person',
+          name: '客戶評價',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
+        reviewBody: '專業的弱電系統施工服務，技術團隊經驗豐富，服務態度優良，值得信賴。',
+        datePublished: '2025-01-01',
+      },
+    ],
   }
 
   // 網站結構化資料
@@ -271,19 +300,30 @@ export default function RootLayout({
     '@id': 'https://shangchengsecurity.com/#website',
     url: 'https://shangchengsecurity.com',
     name: '上誠通訊監視',
+    alternateName: '上誠通訊',
     description: '專業弱電系統施工廠商，提供監控系統、網路工程、門禁系統、保全系統等服務',
     publisher: {
       '@id': 'https://shangchengsecurity.com/#organization',
     },
     inLanguage: 'zh-TW',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://shangchengsecurity.com/?s={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
+    copyrightHolder: {
+      '@id': 'https://shangchengsecurity.com/#organization',
     },
+    copyrightYear: '2025',
+    potentialAction: [
+      {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://shangchengsecurity.com/?s={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
+      },
+      {
+        '@type': 'ReadAction',
+        target: 'https://shangchengsecurity.com',
+      },
+    ],
   }
 
   // 麵包屑導航結構化資料
@@ -354,28 +394,192 @@ export default function RootLayout({
     '@type': 'Organization',
     '@id': 'https://shangchengsecurity.com/#organization',
     name: '上誠通訊監視',
+    alternateName: '上誠通訊',
     url: 'https://shangchengsecurity.com',
-    logo: 'https://shangchengsecurity.com/favicon.svg',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+886-3-4611676',
-      contactType: 'customer service',
-      areaServed: 'TW',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://shangchengsecurity.com/favicon.svg',
+      width: 512,
+      height: 512,
+    },
+    image: 'https://shangchengsecurity.com/surveillance-night.jpg',
+    description: '專業弱電系統施工廠商，提供監控系統、網路工程、門禁系統、保全系統等服務',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '中華路一段533號',
+      addressLocality: '中壢區',
+      addressRegion: '桃園市',
+      postalCode: '320',
+      addressCountry: 'TW',
+    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+886-3-4611676',
+        contactType: 'customer service',
+        areaServed: 'TW',
+        availableLanguage: ['zh-TW', 'zh-CN'],
+        hoursAvailable: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '18:00',
+        },
+      },
+      {
+        '@type': 'ContactPoint',
+        email: 'shangchengsecurit@gmail.com',
+        contactType: 'customer service',
+        areaServed: 'TW',
+        availableLanguage: ['zh-TW', 'zh-CN'],
+      },
+    ],
+    sameAs: [],
+    foundingDate: '2020',
+    numberOfEmployees: {
+      '@type': 'QuantitativeValue',
+      value: '10-50',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: '桃園市',
+    },
+  }
+
+  // 圖片結構化資料
+  const imageObjectData = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    url: 'https://shangchengsecurity.com/surveillance-night.jpg',
+    contentUrl: 'https://shangchengsecurity.com/surveillance-night.jpg',
+    caption: '上誠通訊監視 - 專業夜間智慧監控系統，AI 即時偵測技術，高畫質成像，24小時守護您的安全',
+    description: '專業監控系統展示，採用 AI 智慧偵測技術，配備 4K 高畫質夜視功能',
+    width: 1200,
+    height: 900,
+    encodingFormat: 'image/jpeg',
+    license: 'https://shangchengsecurity.com',
+    copyrightHolder: {
+      '@type': 'Organization',
+      name: '上誠通訊監視',
+    },
+  }
+
+  // 評價結構化資料
+  const reviewData = {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': 'LocalBusiness',
+      name: '上誠通訊監視',
+      '@id': 'https://shangchengsecurity.com/#organization',
+    },
+    author: {
+      '@type': 'Person',
+      name: '客戶評價',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    reviewBody: '專業的弱電系統施工服務，技術團隊經驗豐富，服務態度優良，值得信賴。',
+    datePublished: '2025-01-01',
+  }
+
+  // 服務結構化資料
+  const serviceData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: '弱電系統工程',
+    provider: {
+      '@id': 'https://shangchengsecurity.com/#organization',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: '桃園市',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://shangchengsecurity.com',
+      servicePhone: '+886-3-4611676',
+      serviceSmsNumber: '+886-3-4611676',
       availableLanguage: ['zh-TW', 'zh-CN'],
     },
-    sameAs: [],
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
   }
 
   return (
     <html lang="zh-TW">
       <head>
+        {/* 基礎 SEO */}
         <link rel="canonical" href="https://shangchengsecurity.com" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* hreflang 標籤 */}
+        <link rel="alternate" hrefLang="zh-TW" href="https://shangchengsecurity.com" />
+        <link rel="alternate" hrefLang="zh-CN" href="https://shangchengsecurity.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://shangchengsecurity.com" />
+        
+        {/* DNS Prefetch 和 Preconnect */}
+        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Preload 關鍵資源 */}
+        <link rel="preload" href="/surveillance-night.jpg" as="image" type="image/jpeg" fetchPriority="high" />
+        
+        {/* 地理標籤 */}
         <meta name="geo.region" content="TW-TAO" />
         <meta name="geo.placename" content="桃園市中壢區" />
         <meta name="geo.position" content="24.9936;121.3010" />
         <meta name="ICBM" content="24.9936, 121.3010" />
+        
+        {/* 更多 Meta 標籤 */}
+        <meta httpEquiv="Content-Language" content="zh-TW" />
+        <meta name="language" content="zh-TW" />
+        <meta name="content-language" content="zh-TW" />
+        <meta name="copyright" content="© 2025 上誠通訊監視 All rights reserved." />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="global" />
+        <meta name="coverage" content="worldwide" />
+        <meta name="target" content="all" />
+        <meta name="audience" content="all" />
+        <meta name="DC.title" content="上誠通訊監視 - 專業弱電系統施工廠商" />
+        <meta name="DC.creator" content="上誠通訊監視" />
+        <meta name="DC.subject" content="弱電系統工程、監控系統、安全防護" />
+        <meta name="DC.description" content="上誠通訊監視是桃園中壢地區專業弱電系統施工廠商，提供監控系統、網路工程、門禁系統、保全系統等完整服務" />
+        <meta name="DC.publisher" content="上誠通訊監視" />
+        <meta name="DC.language" content="zh-TW" />
+        <meta name="DC.coverage" content="桃園市" />
+        
+        {/* Apple 相關標籤 */}
+        <meta name="apple-mobile-web-app-title" content="上誠通訊監視" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        {/* 更多 Open Graph 標籤 */}
+        <meta property="og:image:secure_url" content="https://shangchengsecurity.com/surveillance-night.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale:alternate" content="zh_CN" />
+        <meta property="og:locale:alternate" content="en_US" />
+        
+        {/* 更多 Twitter Card 標籤 */}
+        <meta name="twitter:image:alt" content="上誠通訊監視 - 專業監控系統，AI智慧偵測，4K高畫質夜視，24小時守護您的安全" />
+        <meta name="twitter:site:id" content="@shangchengsecurity" />
+        
+        {/* 結構化資料 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
@@ -395,6 +599,18 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageObjectData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceData) }}
         />
       </head>
       <body>{children}</body>

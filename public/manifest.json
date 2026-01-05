@@ -1,0 +1,39 @@
+{
+  "name": "上誠通訊監視 - 專業弱電系統施工廠商",
+  "short_name": "上誠通訊監視",
+  "description": "桃園中壢地區專業弱電系統施工廠商，提供監控系統、網路工程、門禁系統、保全系統等完整服務",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1E2A5E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "lang": "zh-TW",
+  "dir": "ltr",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "聯絡我們",
+      "short_name": "聯絡",
+      "description": "立即聯絡上誠通訊監視",
+      "url": "/#contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "服務項目",
+      "short_name": "服務",
+      "description": "查看我們的服務項目",
+      "url": "/#services",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}
+
