@@ -77,7 +77,7 @@ export default function Contact() {
               LINE 聯絡
             </a>
           </div>
-        </div>
+        </header>
 
         {/* Contact Info Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
